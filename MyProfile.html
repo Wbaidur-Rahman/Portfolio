@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/ProfileStyle.css" />
+    <title>Wbaidur Rahman</title>
+    <style>
+      /* Add blinking cursor animation */
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      .blink {
+        animation: blink 0.7s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div id="navbar-left">
+        <h3>السلام عليكم ورحمة الله وبركاته</h3>
+        <h4 id="welcome-message"><span class="blink"></span></h4>
+      </div>
+      <div id="navbar-right">
+        <a href="#aboutme">AboutMe</a>
+        <a href="#myworks">MyWorks</a>
+        <a href="#interests">Interests</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="dp-info">
+        <h2>Ubaydur Rahman Shishir.</h2>
+        <div id="code_part">
+          <p>#include <span><</span>stdio.h<span>></span></p>
+          <br />
+          <p>int main(){</p>
+          <p style="margin-left: 20px">printf("Let's be familiar");</p>
+          <p>}</p>
+        </div>
+        <!-- <h3>Mohammad Wbaidur Rahman</h3>
+        <h3>s1910676137@gmail.com</h3> -->
+      </div>
+      <div id="dp">
+        <img src="images/my_pic-1.jpg" alt="myImage" />
+      </div>
+    </div>
+
+    <div id="aboutme">
+      <h1>About Me</h1>
+      <div
+        style="
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+        "
+      >
+        <div class="card">
+          <h3>Educational Background</h3>
+          <br />
+          <h4>SSC: 2016, GPA-5</h4>
+          <h4>HSC: 2018, GPA-4.50</h4>
+          <br />
+          <h4>Studying in CSE at Rajshahi University</h4>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Address</h3>
+        <br />
+        <h4>HomeDist: Mymensingh</h4>
+        <h4>LivesIn: Rajshahi</h4>
+        <br />
+        <h4>Shahid Habibur Rahman Hall, Rajshahi University</h4>
+      </div>
+
+      <div
+        style="
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+        "
+      >
+        <div class="card">
+          <h3>Contact</h3>
+          <br />
+          <h4>Phone: +880 1521751793</h4>
+          <h4>Email: wbaidurrahman2000@gmail.com</h4>
+          <br />
+          <h4>I'm also available on Facebook and LinkdIn</h4>
+        </div>
+      </div>
+    </div>
+
+    <div id="myworks">
+      <h1>My works</h1>
+
+      <div id="works">
+        <div class="workcard">
+          <h1>Raw-Node-Api</h1>
+          <p>
+            This is a practice project i have developed using only raw nodejs.
+          </p>
+          <a href="https://github.com/Wbaidur-Rahman/Raw-Node-APi"
+            >raw-node-api</a
+          >
+        </div>
+        <div class="workcard">
+          <h1>Weather App</h1>
+          <p>This project is for my academic exam.</p>
+          <a href="https://github.com/Wbaidur-Rahman/WeatherApp">weather-app</a>
+        </div>
+
+        <div class="workcard">
+          <h1>Book Rental App</h1>
+          <p>This project is for my final year project.</p>
+          <a href="https://github.com/Wbaidur-Rahman/Raw-Node-APi"
+            >book-rental-app</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="interests">
+      <h1>Interests</h1>
+      <div style="margin-top: 30px">
+        <div id="interest">
+          <h3>Interest-1</h3>
+          <p>Web Development.</p>
+        </div>
+        <div id="interest">
+          <h3>Interest-2</h3>
+          <p>Competitive Programming</p>
+        </div>
+        <div id="interest">
+          <h3>Interest-3</h3>
+          <p>Playing Cricket</p>
+        </div>
+        <div id="interest">
+          <h3>Interest-4</h3>
+          <p>Going Tour</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div id="gallery">
+        <a href="./Gallery.html">Gallery</a>
+      </div>
+      <div id="gallery">
+        <a href="./Gallery.html">Blogs</a>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript code for typing animation
+      document.addEventListener("DOMContentLoaded", function () {
+        var welcomeText = "Welcome to My Profile";
+        var speed = 100; // typing speed in milliseconds
+        var element = document.getElementById("welcome-message");
+        var cursor = document.querySelector(".blink");
+
+        function typeWriter(text, i) {
+          if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(function () {
+              typeWriter(text, i);
+            }, speed);
+          }
+          // Remove cursor when typing is finished
+          else {
+            cursor.style.display = "none";
+          }
+        }
+
+        typeWriter(welcomeText, 0);
+      });
+    </script>
+  </body>
+</html>

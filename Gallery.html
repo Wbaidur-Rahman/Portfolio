@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/ProfileStyle.css" />
+    <link rel="stylesheet" href="./Styles/GalleryStyle.css" />
+    <title>Wbaidur Rahman</title>
+    <style>
+      /* Add blinking cursor animation */
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      .blink {
+        animation: blink 0.7s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div id="navbar-left">
+        <h3>السلام عليكم ورحمة الله وبركاته</h3>
+        <h4 id="welcome-message"><span class="blink"></span></h4>
+      </div>
+    </div>
+
+    <div id="album"></div>
+
+    <script>
+      // JavaScript code for typing animation
+      document.addEventListener("DOMContentLoaded", function () {
+        var welcomeText = "Welcome to My Profile";
+        var speed = 100; // typing speed in milliseconds
+        var element = document.getElementById("welcome-message");
+        var cursor = document.querySelector(".blink");
+
+        function typeWriter(text, i) {
+          if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(function () {
+              typeWriter(text, i);
+            }, speed);
+          }
+          // Remove cursor when typing is finished
+          else {
+            cursor.style.display = "none";
+          }
+        }
+
+        typeWriter(welcomeText, 0);
+      });
+    </script>
+  </body>
+</html>
